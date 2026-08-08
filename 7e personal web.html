@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@7edhee | Profile</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+        /* Reset & CSS Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-sub: #a0a0a0;
+            --accent-color: #7289da;
+            --hover-bg: rgba(255, 255, 255, 0.12);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Background Glow (Guns.lol style effect) */
+        .bg-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(114, 137, 218, 0.25) 0%, rgba(0,0,0,0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Main Container Card */
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 420px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        /* Profile Avatar */
+        .avatar-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 16px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--card-border);
+        }
+
+        /* User Info */
+        .username {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .verified-badge {
+            color: #3897f0;
+            font-size: 1rem;
+        }
+
+        .bio {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* Custom Badges/Tags */
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: var(--text-sub);
+        }
+
+        /* Social Links List */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .link-card:hover {
+            background: var(--hover-bg);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .link-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .link-left i {
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        .arrow-icon {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 24px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+
+        <div class="avatar-container">
+            <img
+                src="C:/Users/adhee/Videos/Stream Contents/IMG_20250809_163240_898.webp"
+                alt="Profile Avatar"
+                class="avatar"
+            width="1440" height="1440" />
+        </div>
+
+        <h1 class="username">
+            @7edhee
+            <i class="fa-solid fa-circle-check verified-badge" title="Verified"></i>
+        </h1>
+
+        <p class="bio">Welcome to my page.</p>
+
+        <div class="tags">
+            <span class="tag"><i class="fa-solid fa-code"></i> Developer</span>
+            <span class="tag"><i class="fa-solid fa-image"></i> Designer</span>
+            <span class="tag"><i class="fa-solid fa-gamepad"></i> Strategist</span>
+        </div>
+
+        <div class="links-container">
+
+            <a href="https://discord.gg/7T3rkBU5V3" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-discord" style="color: #5865F2;"></i>
+                    <span>Discord Server</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@7edhee" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>Youtube</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <a href="https://open.spotify.com/user/31qmxurnx7roeeyluo6pytsbsd24?si=7bbee26e618541e1" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-spotify"></i>
+                    <span>Spotify</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <a href="https://www.instagram.com/7edhee/?utm_source=ig_web_button_share_sheet" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-instagram" style="color: #E1306C;"></i>
+                    <span>Instagram</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <a href="https://www.behance.net/7eadithyan" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-solid fa-link" style="color: #3897f0;"></i>
+                    <span>Behance</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+
+        </div>
+
+        <div class="footer">
+            &copy; 2026 7edhee
+        </div>
+
+    </div>
+
+</body>
+</html>
