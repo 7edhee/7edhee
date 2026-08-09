@@ -1,305 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@7edhee | Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@7edhee | Profile</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-        body {
-            background-color: #0b0c10;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            overflow-x: hidden;
-            position: relative;
-        }
+    body {
+      background-color: #0b0c10;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-        /* --- BACKGROUND ELEMENTS --- */
-        .bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            z-index: -2;
-            pointer-events: none;
-        }
+    /* --- BACKGROUND ELEMENTS --- */
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+      pointer-events: none;
+    }
 
-        .video-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: -1;
-            pointer-events: none;
-        }
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+      pointer-events: none;
+    }
 
-        .bg-glow {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(114, 137, 218, 0.25) 0%, rgba(0,0,0,0) 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 0;
-            pointer-events: none;
-        }
+    .bg-glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(114, 137, 218, 0.25) 0%, rgba(0,0,0,0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      pointer-events: none;
+    }
 
-        /* --- PAGE SWITCHING --- */
-        .page {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            width: 100%;
-            max-width: 420px;
-        }
+    /* --- AUDIO CONTROLLER BUTTON --- */
+    .audio-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
 
-        .page.active {
-            display: block;
-            opacity: 1;
-        }
+    .audio-btn:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: scale(1.08);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
 
-        /* --- CONTAINER & SHARED STYLES --- */
-        .container {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-radius: 20px;
-            padding: 30px 24px;
-            text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-        }
+    /* --- PAGE SWITCHING --- */
+    .page {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      width: 100%;
+      max-width: 420px;
+    }
 
-        .avatar-container {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 16px;
-        }
+    .page.active {
+      display: block;
+      opacity: 1;
+    }
 
-        .avatar {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
+    /* --- CONTAINER & SHARED STYLES --- */
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    }
 
-        .username {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
+    .avatar-container {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 16px;
+    }
 
-        .verified-badge { color: #3897f0; font-size: 1rem; }
-        .bio { color: #a0a0a0; font-size: 0.9rem; margin-bottom: 18px; }
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+    }
 
-        /* Tags */
-        .tags { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
-        .tag { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.05); padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; color: #a0a0a0; }
+    .username {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
 
-        .section-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #a0a0a0; text-align: left; margin: 18px 0 10px 4px; font-weight: 600; }
+    .verified-badge { color: #3897f0; font-size: 1rem; }
+    .bio { color: #a0a0a0; font-size: 0.9rem; margin-bottom: 18px; }
 
-        /* Cards */
-        .works-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
-        .work-card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 14px; text-align: left; transition: all 0.2s ease; cursor: pointer; }
-        .work-card:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-2px); border-color: rgba(255, 255, 255, 0.25); }
+    /* Tags */
+    .tags { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .tag { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.05); padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; color: #a0a0a0; }
 
-        .work-card.discord { background: rgba(88, 101, 242, 0.08); border-color: rgba(88, 101, 242, 0.25); }
-        .work-card.minecraft { background: rgba(87, 242, 135, 0.06); border-color: rgba(87, 242, 135, 0.25); }
+    .section-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #a0a0a0; text-align: left; margin: 18px 0 10px 4px; font-weight: 600; }
 
-        .work-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
-        .work-name { font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
-        .work-badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; }
+    /* Cards */
+    .works-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+    .work-card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 14px; text-align: left; transition: all 0.2s ease; cursor: pointer; }
+    .work-card:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-2px); border-color: rgba(255, 255, 255, 0.25); }
 
-        .discord .work-badge { background: rgba(88, 101, 242, 0.2); color: #5865F2; }
-        .minecraft .work-badge { background: rgba(87, 242, 135, 0.15); color: #57F287; }
+    .work-card.discord { background: rgba(88, 101, 242, 0.08); border-color: rgba(88, 101, 242, 0.25); }
+    .work-card.minecraft { background: rgba(87, 242, 135, 0.06); border-color: rgba(87, 242, 135, 0.25); }
 
-        .work-desc { font-size: 0.8rem; color: #a0a0a0; line-height: 1.35; margin-bottom: 10px; }
-        .work-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; }
-        .discord .work-link { color: #5865F2; }
-        .minecraft .work-link { color: #57F287; }
+    .work-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .work-name { font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+    .work-badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; }
 
-        /* Detail Pages Helpers */
-        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); color: #ffffff; padding: 8px 16px; border-radius: 12px; font-size: 0.85rem; cursor: pointer; margin-bottom: 20px; float: left; }
-        .feature-list { text-align: left; margin: 16px 0; display: flex; flex-direction: column; gap: 10px; }
-        .feature-item { background: rgba(255, 255, 255, 0.03); padding: 10px 12px; border-radius: 10px; font-size: 0.85rem; color: #d0d0d0; display: flex; align-items: center; gap: 10px; }
+    .discord .work-badge { background: rgba(88, 101, 242, 0.2); color: #5865F2; }
+    .minecraft .work-badge { background: rgba(87, 242, 135, 0.15); color: #57F287; }
 
-        /* Links Container & Cards */
-        .links-container { display: flex; flex-direction: column; gap: 10px; }
-        .link-card { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: #ffffff; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.2s ease; }
-        .link-card:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-2px); border-color: rgba(255, 255, 255, 0.25); }
-        .link-left { display: flex; align-items: center; gap: 12px; }
-        .link-left i { font-size: 1.1rem; width: 20px; }
-        .arrow-icon { font-size: 0.8rem; color: #a0a0a0; }
+    .work-desc { font-size: 0.8rem; color: #a0a0a0; line-height: 1.35; margin-bottom: 10px; }
+    .work-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; }
+    .discord .work-link { color: #5865F2; }
+    .minecraft .work-link { color: #57F287; }
 
-        .footer { margin-top: 24px; font-size: 0.75rem; color: rgba(255, 255, 255, 0.3); }
+    /* Detail Pages Helpers */
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); color: #ffffff; padding: 8px 16px; border-radius: 12px; font-size: 0.85rem; cursor: pointer; margin-bottom: 20px; float: left; }
+    .feature-list { text-align: left; margin: 16px 0; display: flex; flex-direction: column; gap: 10px; }
+    .feature-item { background: rgba(255, 255, 255, 0.03); padding: 10px 12px; border-radius: 10px; font-size: 0.85rem; color: #d0d0d0; display: flex; align-items: center; gap: 10px; }
+    
+    /* Links Container & Cards */
+    .links-container { display: flex; flex-direction: column; gap: 10px; }
+    .link-card { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: #ffffff; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.2s ease; }
+    .link-card:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-2px); border-color: rgba(255, 255, 255, 0.25); }
+    .link-left { display: flex; align-items: center; gap: 12px; }
+    .link-left i { font-size: 1.1rem; width: 20px; }
+    .arrow-icon { font-size: 0.8rem; color: #a0a0a0; }
 
-    </style>
+    .footer { margin-top: 24px; font-size: 0.75rem; color: rgba(255, 255, 255, 0.3); }
+
+  </style>
 </head>
 <body>
-        <video id="myVideo" autoplay loop muted playsinline class="bg-video">
-  <source src="Can I get a kiss - Tyler the creator Ft.Kaliuchis.mp4" "type="video/mp4">
-</video>
 
-<!-- Audio Toggle Button -->
-<button id="audioBtn" onclick="toggleAudio()">Unmute</button>
+  <video id="bg-video-el" autoplay loop muted playsinline class="bg-video">
+    <source src="your-video.mp4" type="video/mp4" />
+  </video>
 
-    </video>
+  <button id="audio-toggle" class="audio-btn" onclick="toggleAudio()" title="Unmute Video">
+    <i id="audio-icon" class="fa-solid fa-volume-xmark"></i>
+  </button>
 
-    <div class="video-overlay"></div>
-    <div class="bg-glow"></div>
+  <div class="video-overlay"></div>
+  <div class="bg-glow"></div>
 
-    <div id="home-page" class="page active">
-        <div class="container">
-            <div class="avatar-container">
-                <img src="logo.webp" alt="Avatar" class="avatar" />
-            </div>
-            <h1 class="username">@7edhee <i class="fa-solid fa-circle-check verified-badge"></i></h1>
-            <p class="bio">Welcome to my page.</p>
-            <div class="tags">
-                <span class="tag"><i class="fa-solid fa-code"></i> Developer</span>
-                <span class="tag"><i class="fa-solid fa-cube"></i> Plugin Dev</span>
-                <span class="tag"><i class="fa-solid fa-image"></i> Designer</span>
-                <span class="tag"><i class="fa-solid fa-gamepad"></i> Strategist</span>
-            </div>
+  <div id="home-page" class="page active">
+    <div class="container">
+      <div class="avatar-container">
+        <img src="https://picsum.photos/150" alt="Avatar" class="avatar" />
+      </div>
+      <h1 class="username">@7edhee <i class="fa-solid fa-circle-check verified-badge"></i></h1>
+      <p class="bio">Welcome to my page.</p>
+      <div class="tags">
+        <span class="tag"><i class="fa-solid fa-code"></i> Developer</span>
+        <span class="tag"><i class="fa-solid fa-cube"></i> Plugin Dev</span>
+        <span class="tag"><i class="fa-solid fa-image"></i> Designer</span>
+      </div>
 
-            <div class="section-title">Discord Works</div>
-            <div class="works-list">
-                <div class="work-card discord" onclick="switchPage('discord-page')">
-                    <div class="work-top">
-                        <div class="work-name"><i class="fa-brands fa-discord" style="color: #5865F2;"></i> Server Design</div>
-                        <span class="work-badge">Discord</span>
-                    </div>
-                    <p class="work-desc">Custom layouts, roles, and permission setups.</p>
-                    <span class="work-link">View Details <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </div>
-
-            <div class="section-title">Minecraft Development</div>
-            <div class="works-list">
-                <div class="work-card minecraft" onclick="switchPage('mc-systems-page')">
-                    <div class="work-top">
-                        <div class="work-name"><i class="fa-solid fa-gears" style="color: #57F287;"></i> Server Systems</div>
-                        <span class="work-badge">Paper</span>
-                    </div>
-                    <p class="work-desc">GUIs, economies, and custom server mechanics.</p>
-                    <span class="work-link">View Details <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </div>
-
-            <div class="section-title">Links</div>
-            <div class="links-container">
-
-                <a href="https://discord.gg/7T3rkBU5V3" target="_blank" class="link-card">
-                    <div class="link-left">
-                        <i class="fa-brands fa-discord" style="color: #5865F2;"></i>
-                        <span>Discord Server</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-right arrow-icon"></i>
-                </a>
-
-                <a href="https://www.youtube.com/@7edhee" target="_blank" class="link-card">
-                    <div class="link-left">
-                        <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
-                        <span>YouTube</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-right arrow-icon"></i>
-                </a>
-
-                <a href="https://open.spotify.com/user/31qmxurnx7roeeyluo6pytsbsd24?si=7bbee26e618541e1" target="_blank" class="link-card">
-                    <div class="link-left">
-                        <i class="fa-brands fa-spotify" style="color: #1DB954;"></i>
-                        <span>Spotify</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-right arrow-icon"></i>
-                </a>
-
-                <a href="https://www.instagram.com/7edhee/" target="_blank" class="link-card">
-                    <div class="link-left">
-                        <i class="fa-brands fa-instagram" style="color: #E1306C;"></i>
-                        <span>Instagram</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-right arrow-icon"></i>
-                </a>
-
-                <a href="https://www.behance.net/7eadithyan" target="_blank" class="link-card">
-                    <div class="link-left">
-                        <i class="fa-brands fa-behance" style="color: #0057ff;"></i>
-                        <span>Behance</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-right arrow-icon"></i>
-                </a>
-
-            </div>
-
-            <div class="footer">© 2026 7edhee</div>
+      <div class="section-title">Discord Works</div>
+      <div class="works-list">
+        <div class="work-card discord" onclick="switchPage('discord-page')">
+          <div class="work-top">
+            <div class="work-name"><i class="fa-brands fa-discord" style="color: #5865F2;"></i> Server Design</div>
+            <span class="work-badge">Discord</span>
+          </div>
+          <p class="work-desc">Custom layouts, roles, and permission setups.</p>
+          <span class="work-link">View Details <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-    </div>
+      </div>
 
-    <div id="discord-page" class="page">
-        <div class="container">
-            <button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
-            <div style="clear:both"></div>
-            <h2 style="margin-top:10px"><i class="fa-brands fa-discord" style="color:#5865F2"></i> Discord Design</h2>
-            <div class="feature-list">
-                <div class="feature-item"><i class="fa-solid fa-check"></i> Advanced Role Hierarchy</div>
-                <div class="feature-item"><i class="fa-solid fa-check"></i> Clean Category & Channel Design</div>
-                <div class="feature-item"><i class="fa-solid fa-check"></i> Custom Bot Integration</div>
-            </div>
-            <a href="https://discord.gg/7T3rkBU5V3" target="_blank" class="link-card" style="background:rgba(88,101,242,0.2)">Order Now</a>
-            <div class="footer">© 2026 7edhee</div>
+      <div class="section-title">Minecraft Development</div>
+      <div class="works-list">
+        <div class="work-card minecraft" onclick="switchPage('mc-systems-page')">
+          <div class="work-top">
+            <div class="work-name"><i class="fa-solid fa-gears" style="color: #57F287;"></i> Server Systems</div>
+            <span class="work-badge">Paper</span>
+          </div>
+          <p class="work-desc">GUIs, economies, and custom server mechanics.</p>
+          <span class="work-link">View Details <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-    </div>
+      </div>
 
-    <div id="mc-systems-page" class="page">
-        <div class="container">
-            <button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
-            <div style="clear:both"></div>
-            <h2 style="margin-top:10px"><i class="fa-solid fa-gears" style="color:#57F287"></i> Server Systems</h2>
-            <p class="bio">Comprehensive server-side mechanics.</p>
-            <div class="feature-list">
-                <div class="feature-item"><i class="fa-solid fa-shop" style="color:#57F287"></i> Dynamic Custom GUIs & Shops</div>
-                <div class="feature-item"><i class="fa-solid fa-coins" style="color:#57F287"></i> Economy & Virtual Currency</div>
-                <div class="feature-item"><i class="fa-solid fa-trophy" style="color:#57F287"></i> Custom Event & Reward Logic</div>
-            </div>
-            <a href="https://discord.gg/7T3rkBU5V3" target="_blank" class="link-card" style="margin-top:10px"><div class="link-left"><i class="fa-brands fa-discord"></i> Request Custom System</div></a>
-            <div class="footer">© 2026 7edhee</div>
-        </div>
-    </div>
+      <div class="section-title">Links</div>
+      <div class="links-container">
 
-    <script>
-        function switchPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            setTimeout(() => {
-                document.getElementById(pageId).classList.add('active');
-            }, 150);
-        }
-    </script>
+        <a href="https://discord.gg/7T3rkBU5V3" target="_blank" class="link-card">
+          <div class="link-left">
+            <i class="fa-brands fa-discord" style="color: #5865F2;"></i>
+            <span>Discord Server</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@7edhee" target="_blank" class="link-card">
+          <div class="link-left">
+            <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
+            <span>YouTube</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="http://googleusercontent.com/spotify.com/2" target="_blank" class="link-card">
+          <div class="link-left">
+            <i class="fa-brands fa-spotify" style="color: #1DB954;"></i>
+            <span>Spotify</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="https://www.instagram.com/7edhee/" target="_blank" class="link-card">
+          <div class="link-left">
+            <i class="fa-brands fa-instagram" style="color: #E1306C;"></i>
+            <span>Instagram</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="https://www.behance.net/7eadithyan" target="_blank" class="link-card">
+          <div class="link-left">
+            <i class="fa-brands fa-behance" style="color: #0057ff;"></i>
+            <span>Behance</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+      </div>
+
+      <div class="footer">© 2026 7edhee</div>
+    </div>
+  </div>
+
+  <div id="discord-page" class="page">
+    <div class="container">
+      <button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+      <div style="clear:both"></div>
+      <h2 style="margin-top:10px"><i class="fa-brands fa-discord" style="color:#5865F2"></i> Discord Design</h2>
+      <div class="feature-list">
+        <div class="feature-item"><i class="fa-solid fa-check"></i> Advanced Role Hierarchy</div>
+        <div class="feature-item"><i class="fa-solid fa-check"></i> Clean Category & Channel Design</div>
+        <div class="feature-item"><i class="fa-solid fa-check"></i> Custom Bot Integration</div>
+      </div>
+      <a href="https://discord.gg/7T3rkBU5V3" target="_blank" class="link-card" style="background:rgba(88,101,242,0.2)">Order Now</a>
+      <div class="footer">© 2026 7edhee</div>
+    </div>
+  </div>
+
+  <div id="mc-systems-page" class="page">
+    <div class="container">
+      <button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+      <div style="clear:both"></div>
+      <h2 style="margin-top:10px"><i class="fa-solid fa-gears" style="color:#57F287"></i> Server Systems</h2>
+      <p class="bio">Comprehensive server-side mechanics.</p>
+      <div class="feature-list">
+        <div class="feature-item"><i class="fa-solid fa-shop" style="color:#57F287"></i> Dynamic Custom GUIs & Shops</div>
+        <div class="feature-item"><i class="fa-solid fa-coins" style="color:#57F287"></i> Economy & Virtual Currency</div>
+        <div class="feature-item"><i class="fa-solid fa-trophy" style="color:#57F287"></i> Custom Event & Reward Logic</div>
+      </div>
+      <a href="https://discord.gg/7T3rkBU5V3" target="_blank" class="link-card" style="margin-top:10px"><div class="link-left"><i class="fa-brands fa-discord"></i> Request Custom System</div></a>
+      <div class="footer">© 2026 7edhee</div>
+    </div>
+  </div>
+
+  <script>
+    /* PAGE SWITCHER */
+    function switchPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      setTimeout(() => {
+        document.getElementById(pageId).classList.add('active');
+      }, 150);
+    }
+
+    /* VIDEO AUDIO TOGGLE */
+    function toggleAudio() {
+      const video = document.getElementById('bg-video-el');
+      const icon = document.getElementById('audio-icon');
+      const btn = document.getElementById('audio-toggle');
+
+      if (video.muted) {
+        video.muted = false;
+        icon.className = 'fa-solid fa-volume-high';
+        btn.title = 'Mute Video';
+      } else {
+        video.muted = true;
+        icon.className = 'fa-solid fa-volume-xmark';
+        btn.title = 'Unmute Video';
+      }
+    }
+  </script>
 
 </body>
 </html>
