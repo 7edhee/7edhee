@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="960" viewBox="0 0 1760 960" role="img" aria-labelledby="title desc">
+  <title id="title">7edhee profile terminal</title>
+  <desc id="desc">A dark terminal-style profile card for 7edhee, a software developer and hobbyist.</desc>
+  <rect width="1760" height="960" fill="#0d0e12"/>
+  <rect x="56" y="56" width="1648" height="848" rx="18" fill="#12141b" stroke="#2c3040" stroke-width="4"/>
+  <circle cx="104" cy="104" r="12" fill="#ef806f"/>
+  <circle cx="144" cy="104" r="12" fill="#e3c07a"/>
+  <circle cx="184" cy="104" r="12" fill="#7ccfa6"/>
+  <text x="250" y="114" fill="#616779" font-family="monospace" font-size="28">7edhee // profile</text>
+  <line x1="104" y1="170" x2="1656" y2="170" stroke="#2c3040" stroke-width="3"/>
+  <text x="112" y="270" fill="#8b95f0" font-family="monospace" font-size="34">$ whoami</text>
+  <text x="112" y="350" fill="#e8eaf0" font-family="monospace" font-size="72" font-weight="700">7edhee</text>
+  <text x="112" y="410" fill="#aeb3c2" font-family="monospace" font-size="30">software developer · hobbyist builder</text>
+  <text x="112" y="510" fill="#8b95f0" font-family="monospace" font-size="34">$ focus --current</text>
+  <text x="112" y="570" fill="#e8eaf0" font-family="monospace" font-size="34">browser tools · web interfaces · learning projects</text>
+  <text x="112" y="670" fill="#8b95f0" font-family="monospace" font-size="34">$ status</text>
+  <text x="112" y="730" fill="#7ccfa6" font-family="monospace" font-size="34">building  /  documenting  /  improving</text>
+  <text x="112" y="830" fill="#616779" font-family="monospace" font-size="28">idea → prototype → test → document → refine</text>
+  <rect x="1450" y="235" width="170" height="170" rx="12" fill="#1a1d26" stroke="#8b95f0" stroke-width="3"/>
+  <text x="1535" y="310" text-anchor="middle" fill="#8b95f0" font-family="monospace" font-size="24">SYSTEMS</text>
+  <text x="1535" y="350" text-anchor="middle" fill="#aeb3c2" font-family="monospace" font-size="20">3 active</text>
+  <text x="1535" y="380" text-anchor="middle" fill="#7ccfa6" font-family="monospace" font-size="20">online</text>
+</svg>
