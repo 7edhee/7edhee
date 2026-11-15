@@ -35,4 +35,4 @@
 <br><br>
 <p>👀 &nbsp;Visitors</p>
  <br>
-<img align="left" src="![](https://komarev.com/ghpvc/?username=7edhee)" />
+<img align="left" src="![Views Counter](https://views-counter.vercel.app/badge?pageId=7edhee&leftColor=000000&rightColor=0adb3f&type=total&label=Viewers&style=none)" />
