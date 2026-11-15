@@ -1,12 +1,36 @@
-<p align="center">
-  <a href="https://github.com/7edhee">
-    <img alt="7edhee — software developer and hobbyist builder" width="880" src="assets/profile-terminal.svg" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/7edhee"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-0d0e12?style=flat-square&logo=github&logoColor=8b95f0" /></a>
-  <a href="https://leetcode.com/u/7edhee/"><img alt="LeetCode" src="https://img.shields.io/badge/LeetCode-0d0e12?style=flat-square&logo=leetcode&logoColor=8b95f0" /></a>
-  <a href="https://linkedin.com/in/7edhee"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0d0e12?style=flat-square&logo=linkedin&logoColor=8b95f0" /></a>
-  <a href="https://x.com/7edhee"><img alt="X" src="https://img.shields.io/badge/X-0d0e12?style=flat-square&logo=x&logoColor=8b95f0" /></a>
-  <a href="https://github.com/7edhee?tab=repositories"><img alt="Repositories" src="https://img.shields.io/badge/Projects-0d0e12?style=flat-square&logo=github&logoColor=8b95f0" /></a>
-</p>
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Unbounded&weight=700&size=30&duration=5000&pause=1000&color=7F00FF&background=1E42FF00&center=true&width=435&lines=Adithyan++AKA++7edhee)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Unbounded&weight=700&pause=1000&color=FF2400&background=1E42FF00&center=true&width=435&lines=GITHUB.COM%2F7edhee)
+★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
+
+> ### ⚙️ Mastered languages: 
+![Typing SVG](https://readme-typing-svg.herokuapp.com?color=F7007A&duration=500&lines=js,;python,;php,;html-css,;javascript,;cpp,;c,;react.js,;sql,;shell)
+★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
+
+> ### 👉 Skills: 
+![Typing SVG](https://readme-typing-svg.herokuapp.com?color=6b34eb&duration=4000&lines=Front+End;Back+End;Full+Stack+Developer;Graphic+Designer;Discord+Developer;Web+Developer)
+★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
+> ### 👋 Already worked for: 
+![Typing SVG](https://readme-typing-svg.herokuapp.com?color=ebae34&duration=1000&lines=Currently+Looking+for+one)
+★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
+> ### 🆕 Updates 
+```PY 
+ [+] Last update: 15/11/2026
+ [+] author: 7edhee
+ [+] owner: 7edhee
+ ```
+★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
+> ### 🎈 Socials 
+| 🐻 Reddit | 🐴 Instagram | 🐦 Spotify |
+![DISCORD](https://discord.c99.nl/widget/theme-1/1143526996870180904.png)
+<br>
+```PY
+ Adithyan aka 7edhee
+ ```
+★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
+> Made by 7edhee - README.md v.1.0
+★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
+
+<br><br>
+<p>👀 &nbsp;Visitors</p>
+ <br>
+<img align="left" src="![](https://komarev.com/ghpvc/?username=7edhee)" />
