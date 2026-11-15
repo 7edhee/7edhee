@@ -22,7 +22,7 @@
 > ### 🎈 Socials 
 | 🐻 Reddit | 🐴 Instagram | 🐦 Spotify |
 
-![DISCORD](https://discord.c99.nl/widget/theme-1/1143526996870180904.png)
+![DISCORD](https://discord.c99.nl/widget/theme-3/1143526996870180904.png)
 
 <br>
 
