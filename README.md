@@ -16,7 +16,7 @@
 ```PY 
  [+] Last update: 15/11/2026
  [+] author: 7edhee
- [+] owner: 7edhee
+ [+] owner: 7edhee 
  ```
 ★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
 > ### 🎈 Socials 
@@ -25,9 +25,7 @@
 ![DISCORD](https://discord.c99.nl/widget/theme-1/1143526996870180904.png)
 
 <br>
-``PY
- Adithyan aka 7edhee
- ``
+
 ★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
 
 > Made by 7edhee - README.md v.1.0
@@ -37,5 +35,4 @@
 <br><br>
 <p>👀 &nbsp;Visitors</p>
  <br>
- 
 <img align="left" src="![](https://komarev.com/ghpvc/?username=7edhee)" />
