@@ -1,0 +1,81 @@
+{
+  "widgets": [
+    {
+      "instanceId": "widget_53d58076-97f4-4eda-ba98-db7ea02a48b4",
+      "widgetId": "codeweb-retro-grid",
+      "name": "Codeweb-retro-grid Widget",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 800,
+        "height": 248
+      },
+      "config": {
+        "selectedTechs": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Figma",
+          "CSS3",
+          "HTML5",
+          "cpp",
+          "js",
+          "php",
+          "py",
+          "nodejs",
+          "mysql",
+          "github",
+          "vercel",
+          "vscode",
+          "java"
+        ],
+        "displayMode": "both",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Figma",
+          "CSS3",
+          "HTML5",
+          "cpp",
+          "js",
+          "php",
+          "py",
+          "nodejs",
+          "mysql",
+          "github",
+          "vercel",
+          "vscode",
+          "java"
+        ],
+        "animationType": "slide-up",
+        "animationPreviewKey": 9,
+        "animationEasing": "ease-out",
+        "hideBorder": false,
+        "hideDecorations": false,
+        "accentColor": "#e6fbfb",
+        "secondaryColor": "#8a8a8a",
+        "staticMode": false
+      },
+      "locked": false,
+      "visible": true,
+      "zIndex": 1
+    }
+  ],
+  "globalStyles": {
+    "backgroundColor": "#060606",
+    "textColor": "#e5e5e5",
+    "accentColor": "#c5ff4a",
+    "borderColor": "#252525",
+    "fontFamily": "'Inter Tight', sans-serif",
+    "borderRadius": 0,
+    "padding": 24,
+    "themeMode": "dark",
+    "templateStyle": "blank"
+  },
+  "templateId": "blank"
+}
