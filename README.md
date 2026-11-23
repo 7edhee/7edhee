@@ -14,13 +14,6 @@
 ★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
 <img data-importer="snake" src="https://raw.githubusercontent.com/7edhee/7edhee/snake-output/snake.svg" alt="Snake animation" />
 
-###
-> ### 🆕 Updates 
-```PY 
- [+] Last update: 15/11/2026
- [+] author: 7edhee
- [+] owner: 7edhee 
- ```
 ★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
 > ### 🎈 Socials 
 | 🐻 Reddit | 🐴 Instagram | 🐦 Spotify |
@@ -38,4 +31,8 @@
 <br><br>
 <p>👀 &nbsp;Visitors</p>
  <br>
-<img align="left" src="![Views Counter](https://views-counter.vercel.app/badge?pageId=7edhee&leftColor=000000&rightColor=0adb3f&type=total&label=Viewers&style=none)" />
+<div data-importer="profile-views" align="center">
+  <img data-importer="profile-views" src="https://count.getloli.com/@:7edhee?theme=minecraft&padding=7&scale=1&align=top&pixelated=1&darkmode=auto"  />
+</div>
+
+###
