@@ -12,6 +12,9 @@
 > ### 👋 Already worked for: 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?color=ebae34&duration=1000&lines=Currently+Looking+for+one)
 ★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
+<img data-importer="snake" src="https://raw.githubusercontent.com/7edhee/7edhee/snake-output/snake.svg" alt="Snake animation" />
+
+###
 > ### 🆕 Updates 
 ```PY 
  [+] Last update: 15/11/2026
