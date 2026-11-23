@@ -25,7 +25,7 @@
 > ### 🎈 Socials 
 | 🐻 Reddit | 🐴 Instagram | 🐦 Spotify |
 
-![DISCORD](https://discord.c99.nl/widget/theme-3/1143526996870180904.png)
+![DISCORD](https://disi.fyi/largecard?id=1143526996870180904&bg=000000&activity=true&mood=true&bannerID=5393qqthvuwhyv0&discordLabel=true&avatarDecoration=true&primaryGuild=true)
 
 <br>
 
