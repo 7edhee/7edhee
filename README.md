@@ -18,8 +18,8 @@
 <img data-importer="snake" src="https://raw.githubusercontent.com/7edhee/7edhee/snake-output/snake.svg" alt="Snake animation" />
 
 ★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★
-> ### 🎈 Socials 
-| 🐻 Reddit | 🐴 Instagram | 🐦 Spotify |
+> ### 🎈 Discord
+| 🐻 7edhee | 🐴 Status | 🐦 Activity |
 
 ![DISCORD](https://statusbanner.com/banner/minimal-dark/1143526996870180904.svg?animatedAvatar=1)
 
