@@ -21,7 +21,7 @@
 > ### 🎈 Socials 
 | 🐻 Reddit | 🐴 Instagram | 🐦 Spotify |
 
-![DISCORD](https://disi.fyi/largecard?id=1143526996870180904&activity=true&mood=true&pronouns=he%2Fhiim&bannerID=4lg4pi9sf4xgtv1&discordLabel=true&avatarDecoration=true&primaryGuild=true)
+![DISCORD](https://statusbanner.com/banner/minimal-dark/1143526996870180904.svg?animatedAvatar=1)
 
 <br>
 
