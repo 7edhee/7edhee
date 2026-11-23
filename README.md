@@ -1,8 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/7edhee/7edhee/gitascii/profiles/default/dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/7edhee/7edhee/gitascii/profiles/default/light.svg">
-  <img alt="GitAscii Profile" src="https://raw.githubusercontent.com/7edhee/7edhee/gitascii/profiles/default/dark.svg" width="100%">
-</picture>
+
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Unbounded&weight=700&size=30&duration=5000&pause=1000&color=7F00FF&background=1E42FF00&center=true&width=435&lines=Adithyan++AKA++7edhee)
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Unbounded&weight=700&pause=1000&color=FF2400&background=1E42FF00&center=true&width=435&lines=GITHUB.COM%2F7edhee)
